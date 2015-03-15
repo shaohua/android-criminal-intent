@@ -1,36 +1,16 @@
 package com.howtox.mobile.criminalintent;
 
 import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 
 
-public class CrimeActivity extends ActionBarActivity implements CrimeFragment.OnFragmentInteractionListener {
-
+public class CrimeActivity extends SingleFragmentActivity implements CrimeFragment.OnFragmentInteractionListener {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crime);
-        FragmentManager fm = getSupportFragmentManager();
-        Fragment fragment = fm.findFragmentById(R.id.frameContainer);
-
-        if (fragment == null) {
-            fragment = new CrimeFragment();
-            fm.beginTransaction()
-                    .add(R.id.frameContainer, fragment)
-                    .commit();
-        }
+    protected Fragment createFragment() {
+        return new CrimeFragment();
     }
 
     @Override

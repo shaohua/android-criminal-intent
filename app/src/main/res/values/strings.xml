@@ -5,6 +5,7 @@
     <string name="crime_title_label">Title</string>
     <string name="crime_details_label">Details</string>
     <string name="crime_solved_label">Solved?</string>
+    <string name="crimes_title">Crimes title</string>
     <string name="action_settings">Settings</string>
 
 <!-- TODO: Remove or change this placeholder text -->
